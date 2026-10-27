@@ -1,10 +1,12 @@
 """
 Shared record shapes for the HMM activity recognition notebook.
 
-Import from the notebook: from hmm_types import SamplingRateRow, WindowFeatures
+Import from the notebook: from hmm_types import SamplingRateRow, WindowFeatures, HmmModel, ActivityMetrics, SessionAccuracy
 """
 
 from typing import TypedDict
+
+import numpy as np
 
 
 class SamplingRateRow(TypedDict):
@@ -23,3 +25,23 @@ class WindowFeatures(TypedDict):
     yz_correlation: float
     dominant_frequency: float
     spectral_energy: float
+
+
+class HmmModel(TypedDict):
+    start_probabilities: np.ndarray
+    transition_matrix: np.ndarray
+    means: np.ndarray
+    variances: np.ndarray
+
+
+class ActivityMetrics(TypedDict):
+    activity: str
+    samples: int
+    sensitivity: float
+    specificity: float
+    accuracy: float
+
+
+class SessionAccuracy(TypedDict):
+    session: str
+    accuracy: float
