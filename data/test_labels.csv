@@ -1,0 +1,14 @@
+session,activity,start_seconds,end_seconds,surface
+test_01,still,0,15,table
+test_01,standing,20,35,floor
+test_01,walking,40,55,floor
+test_01,jumping,60,75,floor
+test_02,walking,0,15,floor
+test_02,standing,20,35,carpet
+test_02,jumping,40,55,carpet
+test_02,still,66,78,table
+test_03,standing,0,15,carpet
+test_03,jumping,22,35,floor
+test_03,walking,40,55,floor
+test_03,standing,63,75,floor
+test_03,still,82,97,carpet
