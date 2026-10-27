@@ -1,0 +1,5 @@
+notes/
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+data/original_zips/
