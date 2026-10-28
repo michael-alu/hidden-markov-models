@@ -1,7 +1,7 @@
 """
 Shared record shapes for the HMM activity recognition notebook.
 
-Import from the notebook: from hmm_types import SamplingRateRow, WindowFeatures, HmmModel, ActivityMetrics, SessionAccuracy
+Import from the notebook: from hmm_types import SamplingRateRow, WindowFeatures, HmmModel, ActivityMetrics, SessionAccuracy, ModelComparisonRow
 """
 
 from typing import TypedDict
@@ -45,3 +45,12 @@ class ActivityMetrics(TypedDict):
 class SessionAccuracy(TypedDict):
     session: str
     accuracy: float
+
+
+class ModelComparisonRow(TypedDict):
+    session: str
+    learned_log_likelihood: float
+    realistic_log_likelihood: float
+    learned_switches: int
+    realistic_switches: int
+    windows_that_differ: int
